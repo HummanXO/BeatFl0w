@@ -43,6 +43,24 @@ class MoneyLongViewController : UIViewController {
         return slider
     }()
     
+    private let currentTimeSongLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        label.textColor = .gray
+        label.textAlignment = .left
+        label.text = "00:00"
+        return label
+    }()
+    
+    private let durationSongLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        label.textColor = .gray
+        label.textAlignment = .right
+        label.text = "02:29"
+        return label
+    }()
+    
     private let buttonPlayPause: UIButton = {
         let button = UIButton()
         let configuration = UIImage.SymbolConfiguration(pointSize: 50, weight: .regular)
@@ -70,7 +88,7 @@ class MoneyLongViewController : UIViewController {
     }
     
     private func setupLayout() {
-        [imageSongView, nameSongLabel, artistSongLabel, sliderSong, buttonPlayPause].forEach {
+        [imageSongView, nameSongLabel, artistSongLabel, sliderSong, buttonPlayPause, currentTimeSongLabel, durationSongLabel].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -89,6 +107,12 @@ class MoneyLongViewController : UIViewController {
             sliderSong.topAnchor.constraint(equalTo: artistSongLabel.bottomAnchor, constant: 30),
             sliderSong.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
             sliderSong.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
+            
+            currentTimeSongLabel.leadingAnchor.constraint(equalTo: sliderSong.leadingAnchor),
+            currentTimeSongLabel.bottomAnchor.constraint(equalTo: sliderSong.topAnchor, constant: 5),
+            
+            durationSongLabel.trailingAnchor.constraint(equalTo: sliderSong.trailingAnchor),
+            durationSongLabel.bottomAnchor.constraint(equalTo: sliderSong.topAnchor, constant: 5),
             
             buttonPlayPause.topAnchor.constraint(equalTo: sliderSong.bottomAnchor, constant: 10),
             buttonPlayPause.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -130,7 +154,7 @@ class MoneyLongViewController : UIViewController {
     
     private func startTimer() {
         stopTimer()
-        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
     }
     
     private func stopTimer() {
@@ -139,6 +163,18 @@ class MoneyLongViewController : UIViewController {
     }
     
     @objc private func updateSlider() {
+        let date = Date(timeIntervalSince1970: player.currentTime)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "mm:ss"
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        
+        let duration = player.duration - player.currentTime
+        
+        let durationInput = Date(timeIntervalSince1970: duration)
+        
+        durationSongLabel.text = "-" + formatter.string(from: durationInput)
+        
+        currentTimeSongLabel.text = formatter.string(from: date)
         sliderSong.value = Float(player.currentTime)
     }
 }

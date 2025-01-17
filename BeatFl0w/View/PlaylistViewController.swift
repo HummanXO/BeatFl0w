@@ -35,7 +35,7 @@ class PlaylistViewController: UIViewController {
     private let firstTiming: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.text = "02:29"
+        label.text = "02:14"
         label.textAlignment = .right
         return label
     }()
