@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		A80925182D3A873B0057872E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80925172D3A873B0057872E /* AppDelegate.swift */; };
 		A809251A2D3A873B0057872E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80925192D3A873B0057872E /* SceneDelegate.swift */; };
-		A809251C2D3A873B0057872E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A809251B2D3A873B0057872E /* ViewController.swift */; };
-		A809251F2D3A873B0057872E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A809251D2D3A873B0057872E /* Main.storyboard */; };
 		A80925212D3A873C0057872E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80925202D3A873C0057872E /* Assets.xcassets */; };
-		A80925242D3A873C0057872E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80925222D3A873C0057872E /* LaunchScreen.storyboard */; };
+		A809252D2D3A87960057872E /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A809252C2D3A87960057872E /* PlaylistViewController.swift */; };
+		A809252F2D3A87C10057872E /* MoneyLongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A809252E2D3A87C10057872E /* MoneyLongViewController.swift */; };
+		A80925312D3AA68A0057872E /* kizaru-money-long-mp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A80925302D3AA68A0057872E /* kizaru-money-long-mp3.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A80925142D3A873B0057872E /* BeatFl0w.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeatFl0w.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80925172D3A873B0057872E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A80925192D3A873B0057872E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A809251B2D3A873B0057872E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A809251E2D3A873B0057872E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A80925202D3A873C0057872E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A80925232D3A873C0057872E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A80925252D3A873C0057872E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A809252C2D3A87960057872E /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
+		A809252E2D3A87C10057872E /* MoneyLongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyLongViewController.swift; sourceTree = "<group>"; };
+		A80925302D3AA68A0057872E /* kizaru-money-long-mp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kizaru-money-long-mp3.mp3"; path = "../../Downloads/kizaru-money-long-mp3.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +42,7 @@
 			children = (
 				A80925162D3A873B0057872E /* BeatFl0w */,
 				A80925152D3A873B0057872E /* Products */,
+				A80925302D3AA68A0057872E /* kizaru-money-long-mp3.mp3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +57,22 @@
 		A80925162D3A873B0057872E /* BeatFl0w */ = {
 			isa = PBXGroup;
 			children = (
+				A809252B2D3A87710057872E /* View */,
 				A80925172D3A873B0057872E /* AppDelegate.swift */,
 				A80925192D3A873B0057872E /* SceneDelegate.swift */,
-				A809251B2D3A873B0057872E /* ViewController.swift */,
-				A809251D2D3A873B0057872E /* Main.storyboard */,
 				A80925202D3A873C0057872E /* Assets.xcassets */,
-				A80925222D3A873C0057872E /* LaunchScreen.storyboard */,
 				A80925252D3A873C0057872E /* Info.plist */,
 			);
 			path = BeatFl0w;
+			sourceTree = "<group>";
+		};
+		A809252B2D3A87710057872E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A809252C2D3A87960057872E /* PlaylistViewController.swift */,
+				A809252E2D3A87C10057872E /* MoneyLongViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +133,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A80925242D3A873C0057872E /* LaunchScreen.storyboard in Resources */,
+				A80925312D3AA68A0057872E /* kizaru-money-long-mp3.mp3 in Resources */,
 				A80925212D3A873C0057872E /* Assets.xcassets in Resources */,
-				A809251F2D3A873B0057872E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +145,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A809251C2D3A873B0057872E /* ViewController.swift in Sources */,
 				A80925182D3A873B0057872E /* AppDelegate.swift in Sources */,
+				A809252F2D3A87C10057872E /* MoneyLongViewController.swift in Sources */,
 				A809251A2D3A873B0057872E /* SceneDelegate.swift in Sources */,
+				A809252D2D3A87960057872E /* PlaylistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A809251D2D3A873B0057872E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A809251E2D3A873B0057872E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A80925222D3A873C0057872E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A80925232D3A873C0057872E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A80925262D3A873C0057872E /* Debug */ = {
