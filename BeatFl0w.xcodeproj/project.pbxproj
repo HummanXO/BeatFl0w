@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,9 @@
 		A80925212D3A873C0057872E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80925202D3A873C0057872E /* Assets.xcassets */; };
 		A809252D2D3A87960057872E /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A809252C2D3A87960057872E /* PlaylistViewController.swift */; };
 		A809252F2D3A87C10057872E /* MoneyLongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A809252E2D3A87C10057872E /* MoneyLongViewController.swift */; };
-		A80925312D3AA68A0057872E /* kizaru-money-long-mp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A80925302D3AA68A0057872E /* kizaru-money-long-mp3.mp3 */; };
+		A80925312D3AA68A0057872E /* Money Long.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A80925302D3AA68A0057872E /* Money Long.mp3 */; };
+		A89D32F82D3B85C000632DA4 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D32F72D3B85BB00632DA4 /* SongModel.swift */; };
+		A89D32FA2D3B866D00632DA4 /* Dezhavy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A89D32F92D3B866D00632DA4 /* Dezhavy.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +25,9 @@
 		A80925252D3A873C0057872E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A809252C2D3A87960057872E /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		A809252E2D3A87C10057872E /* MoneyLongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyLongViewController.swift; sourceTree = "<group>"; };
-		A80925302D3AA68A0057872E /* kizaru-money-long-mp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kizaru-money-long-mp3.mp3"; path = "../../Downloads/kizaru-money-long-mp3.mp3"; sourceTree = "<group>"; };
+		A80925302D3AA68A0057872E /* Money Long.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Money Long.mp3"; path = "../../Downloads/Money Long.mp3"; sourceTree = "<group>"; };
+		A89D32F72D3B85BB00632DA4 /* SongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
+		A89D32F92D3B866D00632DA4 /* Dezhavy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dezhavy.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +46,8 @@
 			children = (
 				A80925162D3A873B0057872E /* BeatFl0w */,
 				A80925152D3A873B0057872E /* Products */,
-				A80925302D3AA68A0057872E /* kizaru-money-long-mp3.mp3 */,
+				A80925302D3AA68A0057872E /* Money Long.mp3 */,
+				A89D32F92D3B866D00632DA4 /* Dezhavy.mp3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +62,7 @@
 		A80925162D3A873B0057872E /* BeatFl0w */ = {
 			isa = PBXGroup;
 			children = (
+				A89D32F62D3B85AD00632DA4 /* Model */,
 				A809252B2D3A87710057872E /* View */,
 				A80925172D3A873B0057872E /* AppDelegate.swift */,
 				A80925192D3A873B0057872E /* SceneDelegate.swift */,
@@ -73,6 +79,14 @@
 				A809252E2D3A87C10057872E /* MoneyLongViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A89D32F62D3B85AD00632DA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A89D32F72D3B85BB00632DA4 /* SongModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,8 +115,9 @@
 		A809250C2D3A873B0057872E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1620;
 				ORGANIZATIONNAME = Alexandr;
 				TargetAttributes = {
 					A80925132D3A873B0057872E = {
@@ -133,8 +148,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A80925312D3AA68A0057872E /* kizaru-money-long-mp3.mp3 in Resources */,
+				A80925312D3AA68A0057872E /* Money Long.mp3 in Resources */,
 				A80925212D3A873C0057872E /* Assets.xcassets in Resources */,
+				A89D32FA2D3B866D00632DA4 /* Dezhavy.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A80925182D3A873B0057872E /* AppDelegate.swift in Sources */,
+				A89D32F82D3B85C000632DA4 /* SongModel.swift in Sources */,
 				A809252F2D3A87C10057872E /* MoneyLongViewController.swift in Sources */,
 				A809251A2D3A873B0057872E /* SceneDelegate.swift in Sources */,
 				A809252D2D3A87960057872E /* PlaylistViewController.swift in Sources */,
@@ -181,6 +198,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -191,6 +209,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -241,6 +260,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -251,6 +271,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

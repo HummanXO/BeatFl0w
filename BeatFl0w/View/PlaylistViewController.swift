@@ -2,6 +2,10 @@ import UIKit
 
 class PlaylistViewController: UIViewController {
     
+    var songs: [String] = ["Money Long", "Dezhavy"]
+    
+    var indexSong = 0
+    
     private let firstButton: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = .white
@@ -10,7 +14,7 @@ class PlaylistViewController: UIViewController {
     
     private let firstImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "money_long")
+        imageView.image = UIImage(named: "Money Long")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -54,7 +58,7 @@ class PlaylistViewController: UIViewController {
     
     private let secondImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "Deja_vu")
+        imageView.image = UIImage(named: "Dezhavy")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -79,7 +83,7 @@ class PlaylistViewController: UIViewController {
     private let secondTiming: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.text = "02:54"
+        label.text = "02:53"
         label.textAlignment = .right
         return label
     }()
@@ -185,12 +189,25 @@ class PlaylistViewController: UIViewController {
         firstButton.addTarget(self, action: #selector(highlited(_ :)), for: .touchDown)
         firstButton.addTarget(self, action: #selector(unhighlited(_ :)), for: [.touchDragExit, .touchDragInside, .touchUpInside])
         firstButton.addTarget(self, action: #selector(showFirstSong), for: .touchUpInside)
+        secondButton.addTarget(self, action: #selector(showSecondSong), for: .touchUpInside)
         secondButton.addTarget(self, action: #selector(highlited(_ :)), for: .touchDown)
         secondButton.addTarget(self, action: #selector(unhighlited(_ :)), for: [.touchDragExit, .touchDragInside, .touchUpInside])
     }
     
     @objc private func showFirstSong() {
+        indexSong = 0
         let moneyLongViewController = MoneyLongViewController()
+        moneyLongViewController.songs = self.songs
+        moneyLongViewController.currentIndex = self.indexSong
+        let navController = UINavigationController(rootViewController: moneyLongViewController)
+        present(navController, animated: true)
+    }
+    
+    @objc private func showSecondSong() {
+        indexSong = 1
+        let moneyLongViewController = MoneyLongViewController()
+        moneyLongViewController.songs = self.songs
+        moneyLongViewController.currentIndex = self.indexSong
         let navController = UINavigationController(rootViewController: moneyLongViewController)
         present(navController, animated: true)
     }
